@@ -5,8 +5,8 @@ Using ZabbixApi.php from: https://github.com/intellitrend/zabbixapi-php
 
 Usage: 
 
-1. Copy both scripts to php enabled server.
-2. Fill auth params and trigger config with host names and trigger id's from your zabbix.
+1. Copy php scripts to web server.
+2. Fill config.php with auth and params (host names and trigger id's from your zabbix).
 3. Try if everything works with browser (https://your-server/dir/widget.php)
 4. Add URL widget to zabbix dashboard, pointing to your widget.php
 
