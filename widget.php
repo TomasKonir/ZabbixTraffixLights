@@ -1,5 +1,4 @@
 <?php
-
 require_once("ZabbixApi.php");
 require_once("config.php");
 
@@ -9,7 +8,7 @@ use IntelliTrend\Zabbix\ZabbixApiException;
 $zbx = new ZabbixApi();
 try {
 	$zbx->login($zabUrl, $zabUser, $zabPassword);
-	echo '<div style="display:flex;flex-direction:column;gap:0.5rem">';
+	echo '<div style="display:flex;flex-direction:column;gap:0.25rem">';
 	foreach($params as $p){
 		$result = $zbx->call('trigger.get',array("host" => $p['host'], "triggerids" => $p['triggerid']));
 		$color = 'orange';
@@ -24,7 +23,7 @@ try {
 				$color = 'red';
 			}
 		}
-		print '<div style="display:flex;color:white;"><div style="margin-top:auto;margin-bottom:auto;font-weight:bold;">'.$text.'</div><div style="margin-left:auto;background-color:'.$color.';width:2rem;height:2rem;border-radius:1rem"></div></div>';
+		print '<div style="display:flex;color:white;background-color:#00000011;border-radius:0.25rem;padding:0.25rem;"><div style="margin-top:auto;margin-bottom:auto;font-weight:bold;">'.$text.'</div><div style="margin-left:auto;background-color:'.$color.';width:2rem;height:2rem;border-radius:1rem"></div></div>';
 	}
 	echo '</div>';
 } catch (ZabbixApiException $e) {
