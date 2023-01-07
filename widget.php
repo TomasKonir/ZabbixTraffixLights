@@ -16,7 +16,7 @@ try {
 		if(count($result) == 0){
 			$color = 'yellow';
 		} else {
-			$status = $result[0]["status"];
+			$status = $result[0]["value"];
 			if($status == 0){
 				$color = 'green';
 			} else {
