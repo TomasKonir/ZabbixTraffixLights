@@ -1,6 +1,6 @@
 <?php
 
-$zabUrl ='http://zabbix.doma/';
+$zabUrl ='http://zabbix/';
 $zabUser = 'Admin';
 $zabPassword = 'zabbix';
 
