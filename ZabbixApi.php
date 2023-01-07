@@ -649,3 +649,5 @@ class ZabbixApi {
 		}
 	}
 }
+
+?>
